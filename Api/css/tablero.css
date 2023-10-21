@@ -1,0 +1,161 @@
+section {
+  display: grid;
+  margin: 20px;
+
+  width: 100%;
+}
+
+.resultado {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
+
+.carta {
+  flex: 1;
+
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 2%;
+}
+
+.carta .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.carta .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 30px #cedde7;
+}
+
+.carta .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carta .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.carta .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgba(12, 9, 9, 0.4);
+  padding: 15px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  box-shadow: 0 5px 30px #0ab3ff;
+  height: 90%;
+  width: 90%;
+}
+
+.carta .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.carta .back p {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.carta:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.carta:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* Añadimos reglas para ajustar el diseño en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .resultado .carta {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .carta {
+    flex: 1;
+
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 2%;
+  }
+
+  .carta .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .carta .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 30px #cedde7;
+  }
+
+  .carta .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carta .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  .carta .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(12, 9, 9, 0.4);
+    padding: 15px;
+    color: #fff;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 5px 30px #0ab3ff;
+    height: 90%;
+    width: 90%;
+  }
+
+  .carta .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+
+  .carta .back p {
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+  }
+}

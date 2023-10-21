@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personajes</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/css/shepherd.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablero.css" />
+    <link rel="stylesheet" href="css/fondo.css" />
+    <link rel="stylesheet" href="css/formulario.css" />
+  </head>
+
+  <body>
+    <nav class="ocultarSeccionNav" id="nav">
+      <!-- Tipo 1 -->
+      <div class="header">
+        <h2>Bienvenido</h2>
+        <img
+          id="mostrarOcultarNav"
+          src="img/IconoMenu.svg"
+          alt="Icono de comedor"
+          loading="lazy"
+          width="200px"
+          height="300px"
+        />
+      </div>
+
+      <!-- Tipo 2 -->
+      <div class="seccionNav">
+        <div class="visible">
+          <img
+            src="img/IconoHome.svg"
+            alt="Icono Home"
+            loading="lazy"
+            width="200px"
+            height="300px"
+          />
+          <p onclick="instructivo()">Instructivo</p>
+        </div>
+
+        <div class="visible">
+          <img
+            src="img/IconoProductos.svg"
+            alt="Icono Home"
+            loading="lazy"
+            width="200px"
+            height="300px"
+          />
+          <p>Formulario</p>
+          <img
+            src="img/IconoFlecha.svg"
+            class="abajo"
+            id="desplegar"
+            alt="Icono Flecha"
+            loading="lazy"
+            width="200px"
+            height="300px"
+          />
+        </div>
+        <div class="oculto" id="oculto">
+          <div class="blanco">
+            <div class="contenedor">
+              <form id="form">
+                <div class="imputBox">
+                  <label for="campo"><b>Personajes</b></label>
+                  <select name="campo" id="campo" required>
+                    <option selected=""></option>
+                    <option value="Rick Sanchez">Rick Sanchez</option>
+                    <option value="Morty Smith">Morty Smith</option>
+                    <option value="Summer Smith">Summer Smith</option>
+                    <option value="Beth Smith">Beth Smith</option>
+                    <option value="Jerry Smith">Jerry Smith</option>
+                    <option value="Jessica">Jessica</option>
+                    <option value="Abradolf Lincler">Abradolf Lincler</option>
+                  </select>
+                </div>
+
+                <br />
+                <div class="imputBox">
+                  <button class="inputBox" type="button" onclick="limpiar()">
+                    <b>Limpiar</b>
+                  </button>
+                  <button class="inputBox" id="buscar" type="submit">
+                    <b> Buscar</b>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <h1>Personajes de Rick y Morty</h1>
+    <br />
+
+
+
+    <section id="seccion">
+      <div id="resultado" class="resultado"></div>
+    </section>
+
+    <script src="js/recorrido.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/claseApi.js"></script>
+    <script src="js/formulario.js"></script>
+  </body>
+</html>
