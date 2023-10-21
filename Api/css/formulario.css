@@ -1,0 +1,106 @@
+form h2 {
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.1em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.imputBox {
+  display: flex;
+  justify-content: baseline;
+  position: relative;
+}
+.imputBox select {
+  width: 50%;
+
+  align-items: center;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #140606;
+  outline: none;
+
+  text-transform: 0.15em;
+}
+
+.imputBox label {
+  position: relative;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: #000000;
+}
+
+.imputBox select:focus,
+.imputBox select:valid {
+  border-bottom: 2px solid var(--clr);
+}
+
+.imputBox button {
+  margin: 1px;
+
+  border: none;
+  background: var(--clr);
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  color: rgb(255, 248, 248);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  form h2 {
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .imputBox {
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .imputBox select {
+    width: 50%;
+
+    align-items: center;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #140606;
+    outline: none;
+    text-transform: 0.15em;
+  }
+
+  .imputBox label {
+    position: relative;
+    left: 0;
+    padding: 5px;
+    pointer-events: none;
+    color: #000000;
+  }
+
+  .imputBox select:focus ~ label span,
+  .imputBox select:valid ~ label span {
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+  }
+
+  .imputBox select:focus,
+  .imputBox select:valid {
+    border-bottom: 2px solid var(--clr);
+  }
+  .imputBox button {
+    margin: 1px;
+
+    border: none;
+    background: var(--clr);
+    padding: 2px;
+    width: 90px;
+    border-radius: 5px;
+    color: rgb(255, 248, 248);
+    cursor: pointer;
+  }
+}
