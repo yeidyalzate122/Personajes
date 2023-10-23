@@ -15,12 +15,7 @@ h1 {
 }
 
 body  {
-  width: 100%;
-  height: 100ch;
-  background: linear-gradient(45deg, Silver, Gray, Black, Black);
-  background-size: 400% 400%;
-  position: relative;
-  animation: cambiar 10s ease infinite;
+  background: rebeccapurple;
 }
 
 body::-webkit-scrollbar{
